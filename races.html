@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>F82 | Races</title>
+    <title>82 GRID | Races</title>
 
     <style>
         * {
@@ -90,10 +90,16 @@
             border-radius: 10px;
             padding: 20px;
             margin-bottom: 15px;
+            transition: 0.2s;
+        }
+
+        .race:hover {
+            border-color: #9b0000;
+            transform: translateY(-2px);
         }
 
         .round {
-            color: #888;
+            color: #777;
             font-size: 11px;
             letter-spacing: 2px;
         }
@@ -103,20 +109,27 @@
             font-size: 23px;
         }
 
-        .date {
+        .location {
             color: #aaa;
-            margin-top: 8px;
+            margin-top: 7px;
         }
 
-        .status {
+        .date {
+            color: #777;
+            margin-top: 6px;
+            font-size: 13px;
+        }
+
+        .sprint {
             display: inline-block;
-            margin-top: 15px;
-            padding: 6px 10px;
-            background: #250000;
-            color: #ff6b6b;
+            margin-top: 13px;
+            padding: 5px 9px;
+            background: #300000;
+            color: #ff7070;
             border-radius: 4px;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: bold;
+            letter-spacing: 1px;
         }
 
         footer {
@@ -126,13 +139,20 @@
             font-size: 12px;
             border-top: 1px solid #222;
         }
+
+        @media (min-width: 700px) {
+            .section {
+                padding-left: 8%;
+                padding-right: 8%;
+            }
+        }
     </style>
 </head>
 
 <body>
 
 <header>
-    <div class="logo">F82</div>
+    <div class="logo">82 GRID</div>
     <div class="tagline">THE INDEPENDENT F1 FAN HUB</div>
 </header>
 
@@ -147,38 +167,193 @@
 </nav>
 
 <section class="hero">
-    <small>FORMULA 1</small>
+    <small>2026 FIA FORMULA ONE WORLD CHAMPIONSHIP</small>
     <h1>RACES</h1>
-    <p>The F1 season, race by race.</p>
+    <p>Follow the 2026 season, round by round.</p>
 </section>
 
 <section class="section">
 
     <div class="race">
         <div class="round">ROUND 01</div>
-        <h2>Grand Prix</h2>
-        <div class="date">Race date coming soon</div>
-        <div class="status">UPCOMING</div>
+        <h2>Australian Grand Prix</h2>
+        <div class="location">Melbourne</div>
+        <div class="date">March 6–8, 2026</div>
     </div>
 
     <div class="race">
         <div class="round">ROUND 02</div>
-        <h2>Grand Prix</h2>
-        <div class="date">Race date coming soon</div>
-        <div class="status">UPCOMING</div>
+        <h2>Chinese Grand Prix</h2>
+        <div class="location">Shanghai</div>
+        <div class="date">March 13–15, 2026</div>
+        <div class="sprint">SPRINT</div>
     </div>
 
     <div class="race">
         <div class="round">ROUND 03</div>
-        <h2>Grand Prix</h2>
-        <div class="date">Race date coming soon</div>
-        <div class="status">UPCOMING</div>
+        <h2>Japanese Grand Prix</h2>
+        <div class="location">Suzuka</div>
+        <div class="date">March 27–29, 2026</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 04</div>
+        <h2>Bahrain Grand Prix</h2>
+        <div class="location">Sepang, Malaysia</div>
+        <div class="date">October 2–4, 2026</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 05</div>
+        <h2>Saudi Arabian Grand Prix</h2>
+        <div class="location">Jeddah</div>
+        <div class="date">April 17–19, 2026</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 06</div>
+        <h2>Miami Grand Prix</h2>
+        <div class="location">Miami</div>
+        <div class="date">May 1–3, 2026</div>
+        <div class="sprint">SPRINT</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 07</div>
+        <h2>Canadian Grand Prix</h2>
+        <div class="location">Montreal</div>
+        <div class="date">May 22–24, 2026</div>
+        <div class="sprint">SPRINT</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 08</div>
+        <h2>Monaco Grand Prix</h2>
+        <div class="location">Monaco</div>
+        <div class="date">June 5–7, 2026</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 09</div>
+        <h2>Spanish Grand Prix</h2>
+        <div class="location">Barcelona-Catalunya</div>
+        <div class="date">June 12–14, 2026</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 10</div>
+        <h2>Austrian Grand Prix</h2>
+        <div class="location">Spielberg</div>
+        <div class="date">June 26–28, 2026</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 11</div>
+        <h2>British Grand Prix</h2>
+        <div class="location">Silverstone</div>
+        <div class="date">July 3–5, 2026</div>
+        <div class="sprint">SPRINT</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 12</div>
+        <h2>Belgian Grand Prix</h2>
+        <div class="location">Spa-Francorchamps</div>
+        <div class="date">July 17–19, 2026</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 13</div>
+        <h2>Hungarian Grand Prix</h2>
+        <div class="location">Budapest</div>
+        <div class="date">July 24–26, 2026</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 14</div>
+        <h2>Dutch Grand Prix</h2>
+        <div class="location">Zandvoort</div>
+        <div class="date">August 21–23, 2026</div>
+        <div class="sprint">SPRINT</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 15</div>
+        <h2>Italian Grand Prix</h2>
+        <div class="location">Monza</div>
+        <div class="date">September 4–6, 2026</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 16</div>
+        <h2>Spanish Grand Prix</h2>
+        <div class="location">Madrid — Madring</div>
+        <div class="date">September 11–13, 2026</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 17</div>
+        <h2>Azerbaijan Grand Prix</h2>
+        <div class="location">Baku</div>
+        <div class="date">September 24–26, 2026</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 18</div>
+        <h2>Singapore Grand Prix</h2>
+        <div class="location">Singapore</div>
+        <div class="date">October 9–11, 2026</div>
+        <div class="sprint">SPRINT</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 19</div>
+        <h2>United States Grand Prix</h2>
+        <div class="location">Austin</div>
+        <div class="date">October 23–25, 2026</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 20</div>
+        <h2>Mexico City Grand Prix</h2>
+        <div class="location">Mexico City</div>
+        <div class="date">October 30–November 1, 2026</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 21</div>
+        <h2>São Paulo Grand Prix</h2>
+        <div class="location">São Paulo</div>
+        <div class="date">November 6–8, 2026</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 22</div>
+        <h2>Las Vegas Grand Prix</h2>
+        <div class="location">Las Vegas</div>
+        <div class="date">November 19–21, 2026</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 23</div>
+        <h2>Qatar Grand Prix</h2>
+        <div class="location">Lusail</div>
+        <div class="date">November 27–29, 2026</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 24</div>
+        <h2>Abu Dhabi Grand Prix</h2>
+        <div class="location">Yas Marina</div>
+        <div class="date">December 4–6, 2026</div>
     </div>
 
 </section>
 
 <footer>
-    F82 — BUILT FOR FORMULA 1 FANS.
+    82 GRID — BUILT FOR FORMULA 1 FANS.
+    <br><br>
+    Independent fan project. Not affiliated with Formula 1 or the FIA.
 </footer>
 
 </body>
