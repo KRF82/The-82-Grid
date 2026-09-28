@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>F82 | Races</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080808;
+            color: white;
+        }
+
+        header {
+            padding: 20px;
+            background: #0d0d0d;
+            border-bottom: 1px solid #252525;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        .tagline {
+            color: #888;
+            font-size: 10px;
+            letter-spacing: 2px;
+            margin-top: 4px;
+        }
+
+        nav {
+            display: flex;
+            gap: 18px;
+            overflow-x: auto;
+            padding: 15px 20px;
+            background: #111;
+            border-bottom: 2px solid #8b0000;
+        }
+
+        nav a {
+            color: #bbb;
+            text-decoration: none;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .hero {
+            padding: 45px 20px;
+            background:
+                radial-gradient(circle at right, #350000, transparent 45%),
+                #080808;
+        }
+
+        .hero small {
+            color: #999;
+            letter-spacing: 3px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-top: 10px;
+        }
+
+        .hero p {
+            color: #999;
+            margin-top: 10px;
+        }
+
+        .section {
+            padding: 25px 20px;
+        }
+
+        .race {
+            background: #121212;
+            border: 1px solid #282828;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .round {
+            color: #888;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        .race h2 {
+            margin-top: 8px;
+            font-size: 23px;
+        }
+
+        .date {
+            color: #aaa;
+            margin-top: 8px;
+        }
+
+        .status {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 6px 10px;
+            background: #250000;
+            color: #ff6b6b;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 12px;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">F82</div>
+    <div class="tagline">THE INDEPENDENT F1 FAN HUB</div>
+</header>
+
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="races.html">RACES</a>
+    <a href="#">DRIVERS</a>
+    <a href="#">TEAMS</a>
+    <a href="#">STANDINGS</a>
+    <a href="#">QUIZ</a>
+    <a href="#">REWARDS</a>
+</nav>
+
+<section class="hero">
+    <small>FORMULA 1</small>
+    <h1>RACES</h1>
+    <p>The F1 season, race by race.</p>
+</section>
+
+<section class="section">
+
+    <div class="race">
+        <div class="round">ROUND 01</div>
+        <h2>Grand Prix</h2>
+        <div class="date">Race date coming soon</div>
+        <div class="status">UPCOMING</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 02</div>
+        <h2>Grand Prix</h2>
+        <div class="date">Race date coming soon</div>
+        <div class="status">UPCOMING</div>
+    </div>
+
+    <div class="race">
+        <div class="round">ROUND 03</div>
+        <h2>Grand Prix</h2>
+        <div class="date">Race date coming soon</div>
+        <div class="status">UPCOMING</div>
+    </div>
+
+</section>
+
+<footer>
+    F82 — BUILT FOR FORMULA 1 FANS.
+</footer>
+
+</body>
+</html>
