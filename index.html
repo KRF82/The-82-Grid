@@ -1,35 +1,258 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>F82 | Formula Racing Hub</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080808;
+            color: white;
+        }
+
+        header {
+            padding: 20px;
+            border-bottom: 1px solid #252525;
+            background: #0d0d0d;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        .tagline {
+            color: #888;
+            font-size: 11px;
+            letter-spacing: 2px;
+            margin-top: 4px;
+        }
+
+        nav {
+            display: flex;
+            gap: 18px;
+            overflow-x: auto;
+            padding: 15px 20px;
+            background: #111;
+            border-bottom: 1px solid #252525;
+        }
+
+        nav a {
+            color: #bbb;
+            text-decoration: none;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .hero {
+            padding: 55px 20px;
+            background: linear-gradient(135deg, #111 0%, #080808 70%);
+        }
+
+        .hero small {
+            color: #999;
+            letter-spacing: 3px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin: 12px 0;
+            line-height: 1;
+        }
+
+        .hero p {
+            color: #aaa;
+            max-width: 500px;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 13px 22px;
+            background: white;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .section {
+            padding: 30px 20px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .card {
+            background: #121212;
+            border: 1px solid #252525;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card-label {
+            color: #888;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        .card h3 {
+            margin-top: 8px;
+            font-size: 22px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .feature {
+            min-height: 130px;
+        }
+
+        .feature h3 {
+            margin-bottom: 8px;
+        }
+
+        .feature p {
+            color: #999;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #666;
+            font-size: 12px;
+            border-top: 1px solid #222;
+        }
+
+        @media (min-width: 700px) {
+            .hero,
+            .section {
+                padding-left: 8%;
+                padding-right: 8%;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 70px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>F82</h1>
-    <p>THE INDEPENDENT F1 FAN HUB</p>
+<header>
+    <div class="logo">F82</div>
+    <div class="tagline">THE INDEPENDENT F1 FAN HUB</div>
+</header>
 
-    <hr>
+<nav>
+    <a href="#">HOME</a>
+    <a href="#">RACES</a>
+    <a href="#">DRIVERS</a>
+    <a href="#">TEAMS</a>
+    <a href="#">STANDINGS</a>
+    <a href="#">QUIZ</a>
+    <a href="#">REWARDS</a>
+</nav>
 
-    <h2>Welcome to F82</h2>
-    <p>Your home for Formula 1 news, races, drivers, teams, standings and quizzes.</p>
+<section class="hero">
+    <small>WELCOME TO F82</small>
 
-    <h2>Next Grand Prix</h2>
-    <p>COMING SOON</p>
+    <h1>THE WORLD<br>OF F1.</h1>
 
-    <h2>F82 Features</h2>
-    <ul>
-        <li>Race Calendar</li>
-        <li>Driver Profiles</li>
-        <li>Team Profiles</li>
-        <li>Championship Standings</li>
-        <li>F1 Quiz & XP</li>
-        <li>Rewards & Badges</li>
-    </ul>
+    <p>
+        Race weekends, championship standings,
+        drivers, teams, quizzes and more —
+        all in one place.
+    </p>
 
-    <hr>
+    <a class="button" href="#">EXPLORE F1 →</a>
+</section>
 
-    <p>F82 — Built for Formula 1 fans.</p>
+<section class="section">
 
-</body>
-</html>
+    <h2 class="section-title">NEXT GRAND PRIX</h2>
+
+    <div class="card">
+        <div class="card-label">UPCOMING RACE</div>
+        <h3>GRAND PRIX</h3>
+        <p style="color:#888; margin-top:8px;">
+            Race information coming soon.
+        </p>
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2 class="section-title">F82 FEATURES</h2>
+
+    <div class="grid">
+
+        <div class="card feature">
+            <h3>🏁 Races</h3>
+            <p>
+                Explore the F1 calendar and race weekends.
+            </p>
+        </div>
+
+        <div class="card feature">
+            <h3>🏆 Standings</h3>
+            <p>
+                Follow the Drivers' and Constructors'
+                Championships.
+            </p>
+        </div>
+
+        <div class="card feature">
+            <h3>👤 Drivers</h3>
+            <p>
+                Discover the drivers competing in Formula 1.
+            </p>
+        </div>
+
+        <div class="card feature">
+            <h3>🏎️ Teams</h3>
+            <p>
+                Explore the teams and their championship battles.
+            </p>
+        </div>
+
+        <div class="card feature">
+            <h3>🧠 F1 Quiz</h3>
+            <p>
+                Test your F1 knowledge and earn XP.
+            </p>
+        </div>
+
+        <div class="card feature">
+            <h3>🎁 Rewards</h3>
+            <p>
+                Earn points, unlock
