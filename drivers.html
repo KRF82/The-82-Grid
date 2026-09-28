@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>82 GRID | Drivers</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:
+        radial-gradient(circle at 85% 10%, rgba(180,0,0,0.14), transparent 28%),
+        #070707;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background: rgba(5,5,5,0.95);
+    border-bottom: 1px solid #222;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #e10600;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav a:hover,
+nav a.active {
+    color: #e10600;
+}
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 22px 45px;
+}
+
+.kicker {
+    color: #e10600;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 80px);
+    letter-spacing: -3px;
+}
+
+.hero p {
+    color: #888;
+    max-width: 600px;
+    margin-top: 18px;
+    line-height: 1.6;
+}
+
+.drivers {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 22px 70px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.driver {
+    position: relative;
+    padding: 25px;
+    min-height: 180px;
+
+    background: linear-gradient(135deg, #111, #0b0b0b);
+    border: 1px solid #252525;
+
+    overflow: hidden;
+    transition: 0.25s;
+}
+
+.driver:hover {
+    transform: translateY(-4px);
+    border-color: #555;
+}
+
+.driver::after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    bottom: -45px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid #252525;
+}
+
+.number {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+
+    font-size: 55px;
+    font-weight: 900;
+    color: #181818;
+}
+
+.driver h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 24px;
+}
+
+.driver .team {
+    color: #e10600;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 8px;
+}
+
+.driver .country {
+    color: #888;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.driver .position {
+    position: absolute;
+    bottom: 20px;
+    right: 22px;
+
+    color: #777;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+footer {
+    border-top: 1px solid #222;
+    padding: 30px 22px;
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .drivers {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+<span>82</span> GRID
+</div>
+
+<nav>
+<a href="index.html">HOME</a>
+<a href="races.html">RACES</a>
+<a href="drivers.html" class="active">DRIVERS</a>
+<a href="#">TEAMS</a>
+<a href="#">STANDINGS</a>
+<a href="#">QUIZ</a>
+<a href="#">REWARDS</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="kicker">
+2026 FORMULA 1
+</div>
+
+<h1>DRIVERS.</h1>
+
+<p>
+Meet the drivers competing in the 2026 Formula 1 World Championship.
+Explore their teams, numbers and championship positions.
+</p>
+
+</section>
+
+
+<main class="drivers">
+
+
+<!-- DRIVER -->
+
+<article class="driver">
+
+<div class="number">44</div>
+
+<h2>Lewis Hamilton</h2>
+
+<div class="team">FERRARI</div>
+
+<div class="country">🇬🇧 United Kingdom</div>
+
+<div class="position"># — CHAMPIONSHIP</div>
+
+</article>
+
+
+<article class="driver">
+
+<div class="number">16</div>
+
+<h2>Charles Leclerc</h2>
+
+<div class="team">FERRARI</div>
+
+<div class="country">🇲🇨 Monaco</div>
+
+<div class="position"># — CHAMPIONSHIP</div>
+
+</article>
+
+
+<article class="driver">
+
+<div class="number">1</div>
+
+<h2>Max Verstappen</h2>
+
+<div class="team">RED BULL RACING</div>
+
+<div class="country">🇳🇱 Netherlands</div>
+
+<div class="position"># — CHAMPIONSHIP</div>
+
+</article>
+
+
+<article class="driver">
+
+<div class="number">63</div>
+
+<h2>George Russell</h2>
+
+<div class="team">MERCEDES</div>
+
+<div class="country">🇬🇧 United Kingdom</div>
+
+<div class="position"># — CHAMPIONSHIP</div>
+
+</article>
+
+
+<article class="driver">
+
+<div class="number">12</div>
+
+<h2>Kimi Antonelli</h2>
+
+<div class="team">MERCEDES</div>
+
+<div class="country">🇮🇹 Italy</div>
+
+<div class="position"># — CHAMPIONSHIP</div>
+
+</article>
+
+
+<article class="driver">
+
+<div class="number">4</div>
+
+<h2>Lando Norris</h2>
+
+<div class="team">McLAREN</div>
+
+<div class="country">🇬🇧 United Kingdom</div>
+
+<div class="position"># — CHAMPIONSHIP</div>
+
+</article>
+
+
+<article class="driver">
+
+<div class="number">81</div>
+
+<h2>Oscar Piastri</h2>
+
+<div class="team">McLAREN</div>
+
+<div class="country">🇦🇺 Australia</div>
+
+<div class="position"># — CHAMPIONSHIP</div>
+
+</article>
+
+
+<article class="driver">
+
+<div class="number">23</div>
+
+<h2>Alex Albon</h2>
+
+<div class="team">WILLIAMS</div>
+
+<div class="country">🇹🇭 Thailand</div>
+
+<div class="position"># — CHAMPIONSHIP</div>
+
+</article>
+
+
+<article class="driver">
+
+<div class="number">55</div>
+
+<h2>Carlos Sainz</h2>
+
+<div class="team">WILLIAMS</div>
+
+<div class="country">🇪🇸 Spain</div>
+
+<div class="position"># — CHAMPIONSHIP</div>
+
+</article>
+
+
+<article class="driver">
+
+<div class="number">14</div>
+
+<h2>Fernando Alonso</h2>
+
+<div class="team">ASTON MARTIN</div>
+
+<div class="country">🇪🇸 Spain</div>
+
+<div class="position"># — CHAMPIONSHIP</div>
+
+</article>
+
+
+<article class="driver">
+
+<div class="number">18</div>
+
+<h2>Lance Stroll</h2>
+
+<div class="team">ASTON MARTIN</div>
+
+<div class="country">🇨🇦 Canada</div>
+
+<div class="position"># — CHAMPIONSHIP</div>
+
+</article>
+
+
+<article class="driver">
+
+<div class="number">10</div>
+
+<h2>Pierre Gasly</h2>
+
+<div class="team">ALPINE</div>
+
+<div class="country">🇫🇷 France</div>
+
+<div class="position"># — CHAMPIONSHIP</div>
+
+</article>
+
+
+</main>
+
+
+<footer>
+
+© 2026 82 GRID • Independent F1 Fan Project
+
+<br><br>
+
+Not affiliated with Formula 1 or the FIA.
+
+</footer>
+
+
+</body>
+  </html>
