@@ -1,360 +1,562 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>82 GRID | Races</title>
+<title>82 GRID | 2026 F1 Races</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #080808;
-            color: white;
-        }
+body {
+    background:
+        radial-gradient(circle at 85% 10%, rgba(180,0,0,0.14), transparent 28%),
+        linear-gradient(135deg, #050505, #0b0b0b 55%, #050505);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-        header {
-            padding: 20px;
-            background: #0d0d0d;
-            border-bottom: 1px solid #252525;
-        }
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(5,5,5,0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #222;
+}
 
-        .logo {
-            font-size: 30px;
-            font-weight: 900;
-            letter-spacing: 3px;
-        }
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
 
-        .tagline {
-            color: #888;
-            font-size: 10px;
-            letter-spacing: 2px;
-            margin-top: 4px;
-        }
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
 
-        nav {
-            display: flex;
-            gap: 18px;
-            overflow-x: auto;
-            padding: 15px 20px;
-            background: #111;
-            border-bottom: 2px solid #8b0000;
-        }
+.logo span {
+    color: #e10600;
+}
 
-        nav a {
-            color: #bbb;
-            text-decoration: none;
-            font-size: 13px;
-            white-space: nowrap;
-        }
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
 
-        nav a:hover {
-            color: white;
-        }
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
 
-        .hero {
-            padding: 45px 20px;
-            background:
-                radial-gradient(circle at right, #350000, transparent 45%),
-                #080808;
-        }
+nav a:hover,
+nav a.active {
+    color: #fff;
+}
 
-        .hero small {
-            color: #999;
-            letter-spacing: 3px;
-        }
+nav a.active {
+    color: #e10600;
+}
 
-        .hero h1 {
-            font-size: 45px;
-            margin-top: 10px;
-        }
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 75px 22px 45px;
+}
 
-        .hero p {
-            color: #999;
-            margin-top: 10px;
-        }
+.kicker {
+    color: #e10600;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
 
-        .section {
-            padding: 25px 20px;
-        }
+.hero h1 {
+    font-size: clamp(42px, 8vw, 82px);
+    line-height: 0.95;
+    letter-spacing: -3px;
+}
 
-        .race {
-            background: #121212;
-            border: 1px solid #282828;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 15px;
-            transition: 0.2s;
-        }
+.hero p {
+    color: #999;
+    margin-top: 20px;
+    max-width: 620px;
+    line-height: 1.6;
+}
 
-        .race:hover {
-            border-color: #9b0000;
-            transform: translateY(-2px);
-        }
+.season-bar {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding: 0 22px;
+}
 
-        .round {
-            color: #777;
-            font-size: 11px;
-            letter-spacing: 2px;
-        }
+.season-bar-inner {
+    border: 1px solid #252525;
+    background: #0c0c0c;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
-        .race h2 {
-            margin-top: 8px;
-            font-size: 23px;
-        }
+.season-title {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
 
-        .location {
-            color: #aaa;
-            margin-top: 7px;
-        }
+.season-info {
+    color: #888;
+    font-size: 13px;
+}
 
-        .date {
-            color: #777;
-            margin-top: 6px;
-            font-size: 13px;
-        }
+.races {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 22px 70px;
+}
 
-        .sprint {
-            display: inline-block;
-            margin-top: 13px;
-            padding: 5px 9px;
-            background: #300000;
-            color: #ff7070;
-            border-radius: 4px;
-            font-size: 10px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
+.race {
+    position: relative;
+    display: grid;
+    grid-template-columns: 85px 1fr auto;
+    gap: 24px;
+    align-items: center;
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #666;
-            font-size: 12px;
-            border-top: 1px solid #222;
-        }
+    padding: 24px;
+    margin-bottom: 12px;
 
-        @media (min-width: 700px) {
-            .section {
-                padding-left: 8%;
-                padding-right: 8%;
-            }
-        }
-    </style>
+    background: linear-gradient(90deg, #0d0d0d, #101010);
+    border: 1px solid #222;
+
+    transition: 0.25s;
+    overflow: hidden;
+}
+
+.race::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #333;
+}
+
+.race:hover {
+    transform: translateX(4px);
+    border-color: #444;
+}
+
+.race.completed::before {
+    background: #666;
+}
+
+.race.next {
+    border-color: #e10600;
+    background:
+        linear-gradient(90deg, rgba(225,6,0,0.12), #101010 45%);
+}
+
+.race.next::before {
+    background: #e10600;
+}
+
+.round {
+    font-size: 13px;
+    color: #777;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.round strong {
+    display: block;
+    font-size: 30px;
+    color: #fff;
+    margin-top: 4px;
+}
+
+.race-main h2 {
+    font-size: 21px;
+    margin-bottom: 7px;
+}
+
+.location {
+    color: #999;
+    font-size: 14px;
+}
+
+.date {
+    color: #777;
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+.status {
+    text-align: right;
+    min-width: 115px;
+}
+
+.status span {
+    display: inline-block;
+    padding: 7px 10px;
+    border: 1px solid #333;
+    color: #888;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.next .status span {
+    color: #fff;
+    border-color: #e10600;
+    background: #e10600;
+}
+
+.sprint {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 4px 7px;
+    border: 1px solid #555;
+    color: #ccc;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+footer {
+    border-top: 1px solid #222;
+    padding: 30px 22px;
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    .hero {
+        padding-top: 55px;
+    }
+
+    .race {
+        grid-template-columns: 55px 1fr;
+        gap: 15px;
+    }
+
+    .status {
+        grid-column: 2;
+        text-align: left;
+    }
+
+    .round strong {
+        font-size: 24px;
+    }
+
+    .race-main h2 {
+        font-size: 18px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <div class="logo">82 GRID</div>
-    <div class="tagline">THE INDEPENDENT F1 FAN HUB</div>
+    <div class="navbar">
+
+        <div class="logo">
+            <span>82</span> GRID
+        </div>
+
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="races.html" class="active">RACES</a>
+            <a href="#">DRIVERS</a>
+            <a href="#">TEAMS</a>
+            <a href="#">STANDINGS</a>
+            <a href="#">QUIZ</a>
+            <a href="#">REWARDS</a>
+        </nav>
+
+    </div>
 </header>
 
-<nav>
-    <a href="index.html">HOME</a>
-    <a href="races.html">RACES</a>
-    <a href="#">DRIVERS</a>
-    <a href="#">TEAMS</a>
-    <a href="#">STANDINGS</a>
-    <a href="#">QUIZ</a>
-    <a href="#">REWARDS</a>
-</nav>
 
 <section class="hero">
-    <small>2026 FIA FORMULA ONE WORLD CHAMPIONSHIP</small>
-    <h1>RACES</h1>
-    <p>Follow the 2026 season, round by round.</p>
+
+    <div class="kicker">2026 FIA FORMULA ONE WORLD CHAMPIONSHIP</div>
+
+    <h1>THE RACES.</h1>
+
+    <p>
+        Every Grand Prix of the 2026 Formula 1 season,
+        from Melbourne to Abu Dhabi.
+        Follow the calendar, discover each circuit
+        and keep track of the championship.
+    </p>
+
 </section>
 
-<section class="section">
 
-    <div class="race">
-        <div class="round">ROUND 01</div>
-        <h2>Australian Grand Prix</h2>
-        <div class="location">Melbourne</div>
-        <div class="date">March 6–8, 2026</div>
-    </div>
+<section class="season-bar">
 
-    <div class="race">
-        <div class="round">ROUND 02</div>
-        <h2>Chinese Grand Prix</h2>
-        <div class="location">Shanghai</div>
-        <div class="date">March 13–15, 2026</div>
-        <div class="sprint">SPRINT</div>
-    </div>
+    <div class="season-bar-inner">
 
-    <div class="race">
-        <div class="round">ROUND 03</div>
-        <h2>Japanese Grand Prix</h2>
-        <div class="location">Suzuka</div>
-        <div class="date">March 27–29, 2026</div>
-    </div>
+        <div class="season-title">
+            2026 SEASON
+        </div>
 
-    <div class="race">
-        <div class="round">ROUND 04</div>
-        <h2>Bahrain Grand Prix</h2>
-        <div class="location">Sepang, Malaysia</div>
-        <div class="date">October 2–4, 2026</div>
-    </div>
+        <div class="season-info">
+            23 Grands Prix • 6 Sprint weekends
+        </div>
 
-    <div class="race">
-        <div class="round">ROUND 05</div>
-        <h2>Saudi Arabian Grand Prix</h2>
-        <div class="location">Jeddah</div>
-        <div class="date">April 17–19, 2026</div>
-    </div>
-
-    <div class="race">
-        <div class="round">ROUND 06</div>
-        <h2>Miami Grand Prix</h2>
-        <div class="location">Miami</div>
-        <div class="date">May 1–3, 2026</div>
-        <div class="sprint">SPRINT</div>
-    </div>
-
-    <div class="race">
-        <div class="round">ROUND 07</div>
-        <h2>Canadian Grand Prix</h2>
-        <div class="location">Montreal</div>
-        <div class="date">May 22–24, 2026</div>
-        <div class="sprint">SPRINT</div>
-    </div>
-
-    <div class="race">
-        <div class="round">ROUND 08</div>
-        <h2>Monaco Grand Prix</h2>
-        <div class="location">Monaco</div>
-        <div class="date">June 5–7, 2026</div>
-    </div>
-
-    <div class="race">
-        <div class="round">ROUND 09</div>
-        <h2>Spanish Grand Prix</h2>
-        <div class="location">Barcelona-Catalunya</div>
-        <div class="date">June 12–14, 2026</div>
-    </div>
-
-    <div class="race">
-        <div class="round">ROUND 10</div>
-        <h2>Austrian Grand Prix</h2>
-        <div class="location">Spielberg</div>
-        <div class="date">June 26–28, 2026</div>
-    </div>
-
-    <div class="race">
-        <div class="round">ROUND 11</div>
-        <h2>British Grand Prix</h2>
-        <div class="location">Silverstone</div>
-        <div class="date">July 3–5, 2026</div>
-        <div class="sprint">SPRINT</div>
-    </div>
-
-    <div class="race">
-        <div class="round">ROUND 12</div>
-        <h2>Belgian Grand Prix</h2>
-        <div class="location">Spa-Francorchamps</div>
-        <div class="date">July 17–19, 2026</div>
-    </div>
-
-    <div class="race">
-        <div class="round">ROUND 13</div>
-        <h2>Hungarian Grand Prix</h2>
-        <div class="location">Budapest</div>
-        <div class="date">July 24–26, 2026</div>
-    </div>
-
-    <div class="race">
-        <div class="round">ROUND 14</div>
-        <h2>Dutch Grand Prix</h2>
-        <div class="location">Zandvoort</div>
-        <div class="date">August 21–23, 2026</div>
-        <div class="sprint">SPRINT</div>
-    </div>
-
-    <div class="race">
-        <div class="round">ROUND 15</div>
-        <h2>Italian Grand Prix</h2>
-        <div class="location">Monza</div>
-        <div class="date">September 4–6, 2026</div>
-    </div>
-
-    <div class="race">
-        <div class="round">ROUND 16</div>
-        <h2>Spanish Grand Prix</h2>
-        <div class="location">Madrid — Madring</div>
-        <div class="date">September 11–13, 2026</div>
-    </div>
-
-    <div class="race">
-        <div class="round">ROUND 17</div>
-        <h2>Azerbaijan Grand Prix</h2>
-        <div class="location">Baku</div>
-        <div class="date">September 24–26, 2026</div>
-    </div>
-
-    <div class="race">
-        <div class="round">ROUND 18</div>
-        <h2>Singapore Grand Prix</h2>
-        <div class="location">Singapore</div>
-        <div class="date">October 9–11, 2026</div>
-        <div class="sprint">SPRINT</div>
-    </div>
-
-    <div class="race">
-        <div class="round">ROUND 19</div>
-        <h2>United States Grand Prix</h2>
-        <div class="location">Austin</div>
-        <div class="date">October 23–25, 2026</div>
-    </div>
-
-    <div class="race">
-        <div class="round">ROUND 20</div>
-        <h2>Mexico City Grand Prix</h2>
-        <div class="location">Mexico City</div>
-        <div class="date">October 30–November 1, 2026</div>
-    </div>
-
-    <div class="race">
-        <div class="round">ROUND 21</div>
-        <h2>São Paulo Grand Prix</h2>
-        <div class="location">São Paulo</div>
-        <div class="date">November 6–8, 2026</div>
-    </div>
-
-    <div class="race">
-        <div class="round">ROUND 22</div>
-        <h2>Las Vegas Grand Prix</h2>
-        <div class="location">Las Vegas</div>
-        <div class="date">November 19–21, 2026</div>
-    </div>
-
-    <div class="race">
-        <div class="round">ROUND 23</div>
-        <h2>Qatar Grand Prix</h2>
-        <div class="location">Lusail</div>
-        <div class="date">November 27–29, 2026</div>
-    </div>
-
-    <div class="race">
-        <div class="round">ROUND 24</div>
-        <h2>Abu Dhabi Grand Prix</h2>
-        <div class="location">Yas Marina</div>
-        <div class="date">December 4–6, 2026</div>
     </div>
 
 </section>
 
-<footer>
-    82 GRID — BUILT FOR FORMULA 1 FANS.
-    <br><br>
-    Independent fan project. Not affiliated with Formula 1 or the FIA.
-</footer>
 
-</body>
-</html>
+<main class="races">
+
+
+    <!-- ROUND 01 -->
+
+    <article class="race completed">
+
+        <div class="round">
+            ROUND
+            <strong>01</strong>
+        </div>
+
+        <div class="race-main">
+            <h2>Australian Grand Prix</h2>
+            <div class="location">🇦🇺 Melbourne • Albert Park</div>
+            <div class="date">06 – 08 MAR 2026</div>
+        </div>
+
+        <div class="status">
+            <span>COMPLETED</span>
+        </div>
+
+    </article>
+
+
+    <!-- ROUND 02 -->
+
+    <article class="race completed">
+
+        <div class="round">
+            ROUND
+            <strong>02</strong>
+        </div>
+
+        <div class="race-main">
+            <h2>Chinese Grand Prix <span class="sprint">SPRINT</span></h2>
+            <div class="location">🇨🇳 Shanghai • Shanghai International Circuit</div>
+            <div class="date">13 – 15 MAR 2026</div>
+        </div>
+
+        <div class="status">
+            <span>COMPLETED</span>
+        </div>
+
+    </article>
+
+
+    <!-- ROUND 03 -->
+
+    <article class="race completed">
+
+        <div class="round">
+            ROUND
+            <strong>03</strong>
+        </div>
+
+        <div class="race-main">
+            <h2>Japanese Grand Prix</h2>
+            <div class="location">🇯🇵 Suzuka • Suzuka Circuit</div>
+            <div class="date">27 – 29 MAR 2026</div>
+        </div>
+
+        <div class="status">
+            <span>COMPLETED</span>
+        </div>
+
+    </article>
+
+
+    <!-- ROUND 04 -->
+
+    <article class="race completed">
+
+        <div class="round">
+            ROUND
+            <strong>04</strong>
+        </div>
+
+        <div class="race-main">
+            <h2>Miami Grand Prix <span class="sprint">SPRINT</span></h2>
+            <div class="location">🇺🇸 Miami • Miami International Autodrome</div>
+            <div class="date">01 – 03 MAY 2026</div>
+        </div>
+
+        <div class="status">
+            <span>COMPLETED</span>
+        </div>
+
+    </article>
+
+
+    <!-- ROUND 05 -->
+
+    <article class="race completed">
+
+        <div class="round">
+            ROUND
+            <strong>05</strong>
+        </div>
+
+        <div class="race-main">
+            <h2>Canadian Grand Prix <span class="sprint">SPRINT</span></h2>
+            <div class="location">🇨🇦 Montreal • Circuit Gilles-Villeneuve</div>
+            <div class="date">22 – 24 MAY 2026</div>
+        </div>
+
+        <div class="status">
+            <span>COMPLETED</span>
+        </div>
+
+    </article>
+
+
+    <!-- ROUND 06 -->
+
+    <article class="race completed">
+
+        <div class="round">
+            ROUND
+            <strong>06</strong>
+        </div>
+
+        <div class="race-main">
+            <h2>Monaco Grand Prix</h2>
+            <div class="location">🇲🇨 Monaco • Circuit de Monaco</div>
+            <div class="date">05 – 07 JUN 2026</div>
+        </div>
+
+        <div class="status">
+            <span>COMPLETED</span>
+        </div>
+
+    </article>
+
+
+    <!-- ROUND 07 -->
+
+    <article class="race completed">
+
+        <div class="round">
+            ROUND
+            <strong>07</strong>
+        </div>
+
+        <div class="race-main">
+            <h2>Spanish Grand Prix</h2>
+            <div class="location">🇪🇸 Barcelona • Circuit de Barcelona-Catalunya</div>
+            <div class="date">12 – 14 JUN 2026</div>
+        </div>
+
+        <div class="status">
+            <span>COMPLETED</span>
+        </div>
+
+    </article>
+
+
+    <!-- ROUND 08 -->
+
+    <article class="race completed">
+
+        <div class="round">
+            ROUND
+            <strong>08</strong>
+        </div>
+
+        <div class="race-main">
+            <h2>Austrian Grand Prix</h2>
+            <div class="location">🇦🇹 Spielberg • Red Bull Ring</div>
+            <div class="date">26 – 28 JUN 2026</div>
+        </div>
+
+        <div class="status">
+            <span>COMPLETED</span>
+        </div>
+
+    </article>
+
+
+    <!-- ROUND 09 -->
+
+    <article class="race completed">
+
+        <div class="round">
+            ROUND
+            <strong>09</strong>
+        </div>
+
+        <div class="race-main">
+            <h2>British Grand Prix <span class="sprint">SPRINT</span></h2>
+            <div class="location">🇬🇧 Silverstone • Silverstone Circuit</div>
+            <div class="date">03 – 05 JUL 2026</div>
+        </div>
+
+        <div class="status">
+            <span>COMPLETED</span>
+        </div>
+
+    </article>
+
+
+    <!-- ROUND 10 -->
+
+    <article class="race completed">
+
+        <div class="round">
+            ROUND
+            <strong>10</strong>
+        </div>
+
+        <div class="race-main">
+            <h2>Belgian Grand Prix</h2>
+            <div class="location">🇧🇪 Spa-Francorchamps • Circuit de Spa-Francorchamps</div>
+            <div class="date">17 – 19 JUL 2026</div>
+        </div>
+
+        <div class
