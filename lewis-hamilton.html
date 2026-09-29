@@ -1,1 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>82 GRID | Lewis Hamilton</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #080808;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #0d0d0d;
+    border-bottom: 1px solid #222;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #e10600;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.hero {
+    padding: 70px 7% 40px;
+    border-bottom: 1px solid #222;
+}
+
+.tag {
+    color: #e10600;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: clamp(42px, 8vw, 90px);
+    margin: 10px 0;
+    line-height: 0.95;
+}
+
+.subtitle {
+    color: #888;
+    font-size: 16px;
+}
+
+.content {
+    padding: 40px 7%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.driver-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.stat {
+    background: #111;
+    border: 1px solid #222;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.stat-label {
+    color: #777;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.section-title {
+    margin-top: 50px;
+    border-left: 4px solid #e10600;
+    padding-left: 12px;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 35px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #333;
+    padding: 12px 18px;
+    border-radius: 6px;
+}
+
+.back:hover {
+    border-color: #e10600;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 30px 7%;
+    border-top: 1px solid #222;
+    color: #666;
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 6px;
+    }
+
+    .driver-info {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+82 <span>GRID</span>
+</div>
+
+<nav>
+<a href="index.html">HOME</a>
+<a href="races.html">RACES</a>
+<a href="drivers.html">DRIVERS</a>
+<a href="#">TEAMS</a>
+<a href="#">STANDINGS</a>
+<a href="#">QUIZ</a>
+<a href="#">REWARDS</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="tag">DRIVER PROFILE · #44</div>
+
+<h1>LEWIS<br>HAMILTON</h1>
+
+<div class="subtitle">
+Ferrari · United Kingdom
+</div>
+
+</section>
+
+<main class="content">
+
+<div class="driver-info">
+
+<div class="stat">
+<div class="stat-label">DRIVER NUMBER</div>
+<div class="stat-value">44</div>
+</div>
+
+<div class="stat">
+<div class="stat-label">TEAM</div>
+<div class="stat-value">FERRARI</div>
+</div>
+
+<div class="stat">
+<div class="stat-label">NATIONALITY</div>
+<div class="stat-value">🇬🇧 UK</div>
+</div>
+
+<div class="stat">
+<div class="stat-label">CHAMPIONSHIPS</div>
+<div class="stat-value">7</div>
+</div>
+
+</div>
+
+<h2 class="section-title">ABOUT</h2>
+
+<p>
+Lewis Hamilton is one of Formula 1's most successful drivers,
+competing for Ferrari with the iconic number 44.
+</p>
+
+<h2 class="section-title">82 GRID</h2>
+
+<p>
+Track Lewis Hamilton's races, results, standings and career
+information right here on 82 GRID.
+</p>
+
+<a href="drivers.html" class="back">
+← BACK TO DRIVERS
+</a>
+
+</main>
+
+<footer>
+82 GRID · Independent F1 Fan Project · Not affiliated with Formula 1 or the FIA.
+</footer>
+
+</body>
+</html>
